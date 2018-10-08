@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CYJRECBuildCVC" customModule="ZiPingSwift" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="244" height="92"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="244" height="92"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vvs-KT-6fs">
+                        <rect key="frame" x="0.0" y="0.0" width="244" height="92"/>
+                        <color key="backgroundColor" red="0.23529411759999999" green="0.72549019609999998" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="记录日期" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfz-sS-ASW">
+                        <rect key="frame" x="15" y="38" width="53.5" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="54" id="gVm-84-4sa"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UW7-k3-Art">
+                        <rect key="frame" x="197" y="30" width="32" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="32" id="J1e-VC-9Oq"/>
+                            <constraint firstAttribute="height" constant="32" id="Rgb-XA-LPT"/>
+                        </constraints>
+                        <state key="normal" image="icon_blue_calendar"/>
+                        <connections>
+                            <action selector="timeEditButtonAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="NDs-Tv-8Xd"/>
+                        </connections>
+                    </button>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Y7M-8d-lPM">
+                        <rect key="frame" x="15" y="4" width="214" height="88"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="幼儿做了什么、说了什么？从表情、动作、语言、互动等角度观察，并作客观具体的记录" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFV-eq-XFe">
+                        <rect key="frame" x="20" y="12" width="214" height="50.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2015-05-10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hvb-fI-WEg">
+                        <rect key="frame" x="105" y="37" width="82" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Y7M-8d-lPM" secondAttribute="bottom" id="7Pt-pp-Bkl"/>
+                <constraint firstItem="UW7-k3-Art" firstAttribute="leading" secondItem="Hvb-fI-WEg" secondAttribute="trailing" constant="10" id="7cH-dv-hv1"/>
+                <constraint firstItem="UW7-k3-Art" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="CMj-w2-N8z"/>
+                <constraint firstItem="vvs-KT-6fs" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Iuv-Av-buj"/>
+                <constraint firstItem="Y7M-8d-lPM" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="4" id="JF4-7z-oe8"/>
+                <constraint firstItem="IFV-eq-XFe" firstAttribute="top" secondItem="Y7M-8d-lPM" secondAttribute="top" constant="8" id="K8D-yc-BnR"/>
+                <constraint firstItem="Hvb-fI-WEg" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="NQ3-KY-xNC"/>
+                <constraint firstItem="vvs-KT-6fs" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="QEz-WV-gsw"/>
+                <constraint firstAttribute="trailing" secondItem="UW7-k3-Art" secondAttribute="trailing" constant="15" id="SjX-pO-wtU"/>
+                <constraint firstAttribute="trailing" secondItem="Y7M-8d-lPM" secondAttribute="trailing" constant="15" id="U09-49-D00"/>
+                <constraint firstItem="IFV-eq-XFe" firstAttribute="trailing" secondItem="Y7M-8d-lPM" secondAttribute="trailing" constant="5" id="aHW-EG-Nll"/>
+                <constraint firstItem="nfz-sS-ASW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="faN-x9-pdM"/>
+                <constraint firstItem="IFV-eq-XFe" firstAttribute="leading" secondItem="Y7M-8d-lPM" secondAttribute="leading" constant="5" id="keh-xW-Htj"/>
+                <constraint firstItem="Y7M-8d-lPM" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="l53-yv-bZP"/>
+                <constraint firstAttribute="trailing" secondItem="vvs-KT-6fs" secondAttribute="trailing" id="pRc-Tv-KUA"/>
+                <constraint firstItem="nfz-sS-ASW" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="pl2-BI-rKe"/>
+                <constraint firstAttribute="bottom" secondItem="vvs-KT-6fs" secondAttribute="bottom" id="y0g-9L-rSS"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="244" height="92"/>
+            <connections>
+                <outlet property="childNameLabel" destination="vvs-KT-6fs" id="2UO-G0-AOw"/>
+                <outlet property="placeholderLabel" destination="IFV-eq-XFe" id="iN2-A0-xOD"/>
+                <outlet property="textView" destination="Y7M-8d-lPM" id="jCW-Md-Uyv"/>
+                <outlet property="timeDetailLabel" destination="Hvb-fI-WEg" id="Odh-CT-fds"/>
+                <outlet property="timeEditButton" destination="UW7-k3-Art" id="nyT-4I-jm4"/>
+                <outlet property="timeTitleLabel" destination="nfz-sS-ASW" id="wwk-dJ-hwZ"/>
+            </connections>
+            <point key="canvasLocation" x="-5" y="46"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="icon_blue_calendar" width="16" height="16"/>
+    </resources>
+</document>

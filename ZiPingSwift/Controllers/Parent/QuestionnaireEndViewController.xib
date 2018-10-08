@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuestionnaireEndViewController" customModule="ZiPingSwift" customModuleProvider="target">
+            <connections>
+                <outlet property="applyButton" destination="TXU-UX-vKb" id="xC2-IH-I4i"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ceping-yijieshu" translatesAutoresizingMaskIntoConstraints="NO" id="PkB-Ki-eqV">
+                    <rect key="frame" x="76" y="75" width="223" height="139"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="PkB-Ki-eqV" secondAttribute="height" multiplier="101:63" id="ACI-L1-m9j"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="本年级的问卷测评已经结束啦~" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2w-59-Mqa">
+                    <rect key="frame" x="10" y="249" width="355" height="19.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="感谢您的支持" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htL-Q6-2P8">
+                    <rect key="frame" x="120.5" y="293.5" width="134" height="27"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TXU-UX-vKb">
+                    <rect key="frame" x="101.5" y="586" width="172" height="39"/>
+                    <color key="backgroundColor" red="0.98823529409999999" green="0.44705882349999998" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="39" id="Jcf-wj-49A"/>
+                        <constraint firstAttribute="width" constant="172" id="gXZ-Cl-Lnw"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="向园长申请专业分析">
+                        <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="applyforMaster:" destination="-1" eventType="touchUpInside" id="06a-eZ-ehG"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="f2w-59-Mqa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="1dx-vf-bug"/>
+                <constraint firstItem="PkB-Ki-eqV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="76" id="1x0-8e-fQb"/>
+                <constraint firstItem="TXU-UX-vKb" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="d4l-gJ-cGP"/>
+                <constraint firstItem="PkB-Ki-eqV" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="fKw-It-CDN"/>
+                <constraint firstItem="htL-Q6-2P8" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="mmu-Ch-hQe"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="TXU-UX-vKb" secondAttribute="bottom" constant="42" id="nV8-Ya-YNp"/>
+                <constraint firstItem="f2w-59-Mqa" firstAttribute="top" secondItem="PkB-Ki-eqV" secondAttribute="bottom" constant="35" id="nxN-zh-f3I"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="f2w-59-Mqa" secondAttribute="trailing" constant="10" id="uSq-6z-gkH"/>
+                <constraint firstItem="PkB-Ki-eqV" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="55" id="wvF-dM-SQp"/>
+                <constraint firstItem="htL-Q6-2P8" firstAttribute="top" secondItem="f2w-59-Mqa" secondAttribute="bottom" constant="25" id="xy3-qR-BQS"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ceping-yijieshu" width="235" height="143"/>
+    </resources>
+</document>

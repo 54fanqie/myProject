@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuestionnComplentViewController" customModule="ZiPingSwift" customModuleProvider="target">
+            <connections>
+                <outlet property="applyAction" destination="NfA-D6-QIB" id="qXm-Bk-UmO"/>
+                <outlet property="applyButton" destination="NfA-D6-QIB" id="L8w-6n-6tz"/>
+                <outlet property="firstLab" destination="NTw-ZU-dbe" id="F03-cc-bnb"/>
+                <outlet property="view" destination="Pl0-8g-N3n" id="7CI-FH-BOE"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Pl0-8g-N3n">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jz-ceping-jinxingzhong-ping" translatesAutoresizingMaskIntoConstraints="NO" id="yee-MK-BeK">
+                    <rect key="frame" x="76" y="75" width="223" height="139"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="yee-MK-BeK" secondAttribute="height" multiplier="101:63" id="YD4-KT-Yy4"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="本年级的问卷测评已经结束啦~" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTw-ZU-dbe">
+                    <rect key="frame" x="10" y="249" width="355" height="19.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="感谢您的支持" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A8g-ia-vSc">
+                    <rect key="frame" x="120.5" y="293.5" width="134" height="27"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NfA-D6-QIB">
+                    <rect key="frame" x="101.5" y="586" width="172" height="39"/>
+                    <color key="backgroundColor" red="0.98823529409999999" green="0.44705882349999998" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="39" id="CWl-U2-tkd"/>
+                        <constraint firstAttribute="width" constant="172" id="OyQ-Yo-x5z"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="向园长申请专业分析">
+                        <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="applyforMaster:" destination="-1" eventType="touchUpInside" id="5OG-Hz-Nm6"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="NTw-ZU-dbe" firstAttribute="leading" secondItem="kBo-sB-aPn" secondAttribute="leading" constant="10" id="0Qb-RY-rsp"/>
+                <constraint firstItem="kBo-sB-aPn" firstAttribute="bottom" secondItem="NfA-D6-QIB" secondAttribute="bottom" constant="42" id="21K-vc-9dU"/>
+                <constraint firstItem="A8g-ia-vSc" firstAttribute="top" secondItem="NTw-ZU-dbe" secondAttribute="bottom" constant="25" id="6bF-45-dab"/>
+                <constraint firstItem="A8g-ia-vSc" firstAttribute="centerX" secondItem="kBo-sB-aPn" secondAttribute="centerX" id="HMO-QU-QPL"/>
+                <constraint firstItem="NfA-D6-QIB" firstAttribute="centerX" secondItem="kBo-sB-aPn" secondAttribute="centerX" id="Lkq-c8-Y1v"/>
+                <constraint firstItem="yee-MK-BeK" firstAttribute="top" secondItem="kBo-sB-aPn" secondAttribute="top" constant="55" id="Xm7-cn-GDC"/>
+                <constraint firstItem="yee-MK-BeK" firstAttribute="centerX" secondItem="kBo-sB-aPn" secondAttribute="centerX" id="ahO-Ce-j4Q"/>
+                <constraint firstItem="yee-MK-BeK" firstAttribute="leading" secondItem="kBo-sB-aPn" secondAttribute="leading" constant="76" id="hCF-69-4Ub"/>
+                <constraint firstItem="NTw-ZU-dbe" firstAttribute="top" secondItem="yee-MK-BeK" secondAttribute="bottom" constant="35" id="soz-p0-6lh"/>
+                <constraint firstItem="kBo-sB-aPn" firstAttribute="trailing" secondItem="NTw-ZU-dbe" secondAttribute="trailing" constant="10" id="xH5-fQ-a4d"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="kBo-sB-aPn"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="jz-ceping-jinxingzhong-ping" width="235" height="143"/>
+    </resources>
+</document>

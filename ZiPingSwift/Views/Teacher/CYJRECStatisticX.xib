@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CYJRECStatisticX" customModule="ZiPingSwift" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="274" height="226"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="274" height="226"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ugE-6x-RiB">
+                        <rect key="frame" x="113" y="106.5" width="49" height="14.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vk1-w1-6Sq">
+                                <rect key="frame" x="0.0" y="0.0" width="31" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="czpj-icon" translatesAutoresizingMaskIntoConstraints="NO" id="D99-9E-LQG">
+                                <rect key="frame" x="39" y="0.5" width="10" height="12"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="12" id="hXZ-Qs-W1z"/>
+                                    <constraint firstAttribute="width" constant="10" id="zLy-GX-VcO"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="D99-9E-LQG" secondAttribute="trailing" id="44Z-OX-VP9"/>
+                            <constraint firstItem="D99-9E-LQG" firstAttribute="centerY" secondItem="ugE-6x-RiB" secondAttribute="centerY" id="7j7-q7-xmJ"/>
+                            <constraint firstItem="Vk1-w1-6Sq" firstAttribute="top" secondItem="ugE-6x-RiB" secondAttribute="top" id="Jbh-E5-5m4"/>
+                            <constraint firstAttribute="bottom" secondItem="Vk1-w1-6Sq" secondAttribute="bottom" id="Jqf-mh-P2C"/>
+                            <constraint firstItem="Vk1-w1-6Sq" firstAttribute="leading" secondItem="ugE-6x-RiB" secondAttribute="leading" id="MHi-Ys-yGq"/>
+                            <constraint firstItem="D99-9E-LQG" firstAttribute="leading" secondItem="Vk1-w1-6Sq" secondAttribute="trailing" constant="8" id="nmx-XG-Lru"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ugE-6x-RiB" secondAttribute="trailing" constant="4" id="1IM-Q3-Ez3"/>
+                <constraint firstItem="ugE-6x-RiB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="3S3-MJ-tpY"/>
+                <constraint firstItem="ugE-6x-RiB" firstAttribute="top" relation="greaterThanOrEqual" secondItem="gTV-IL-0wX" secondAttribute="top" constant="4" id="Yab-9H-7j2"/>
+                <constraint firstItem="ugE-6x-RiB" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Z6O-Oz-7LH"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ugE-6x-RiB" secondAttribute="bottom" constant="4" id="cM0-ZH-5BY"/>
+                <constraint firstItem="ugE-6x-RiB" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="gWh-B6-M49"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="274" height="226"/>
+            <connections>
+                <outlet property="arrowImageView" destination="D99-9E-LQG" id="XzL-yT-o5t"/>
+                <outlet property="titleLabel" destination="Vk1-w1-6Sq" id="vgc-EY-PGd"/>
+            </connections>
+            <point key="canvasLocation" x="6" y="-2"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="czpj-icon" width="8" height="9"/>
+    </resources>
+</document>

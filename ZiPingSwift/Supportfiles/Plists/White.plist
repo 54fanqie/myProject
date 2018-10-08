@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>UIStatusBarStyle</key>
+	<string>Default</string>
+	<key>Global</key>
+	<dict>
+		<key>backgroundColor</key>
+		<string>#FFF</string>
+		<key>textColorLight</key>
+		<string>#999999</string>
+		<key>textColorMid</key>
+		<string>#666666</string>
+		<key>textColorDark</key>
+		<string>#333333</string>
+		<key>textColorHint</key>
+		<string>#D0D0D0</string>
+		<key>separatorColor</key>
+		<string>#C6C5C5</string>
+		<key>borderColor</key>
+		<string>#B5B5B5</string>
+		<key>badgeColor</key>
+		<string>#FF1F22</string>
+	</dict>
+	<key>Nav</key>
+	<dict>
+		<key>barTextColor</key>
+		<string>#00FF00</string>
+		<key>barTintColor</key>
+		<string>#FFF</string>
+	</dict>
+	<key>Tab</key>
+	<dict>
+		<key>barTextColor</key>
+		<string>#123456</string>
+		<key>barTintColor</key>
+		<string>#FFF</string>
+		<key>midItemImage</key>
+		<string>icon_red_fabu</string>
+	</dict>
+	<key>ListViewController</key>
+	<dict>
+		<key>separatorColor</key>
+		<string>#C6C5C5</string>
+	</dict>
+	<key>SelectThemeCell</key>
+	<dict>
+		<key>iconImage</key>
+		<string>icon_theme_yellow</string>
+	</dict>
+	<key>SwitchNightCell</key>
+	<dict>
+		<key>iconImage</key>
+		<string>icon_night_dark</string>
+	</dict>
+	<key>ChangeThemeCell</key>
+	<dict>
+		<key>buttonTitleColorNormal</key>
+		<string>#000</string>
+		<key>buttonTitleColorHighlighted</key>
+		<string>#AAA</string>
+		<key>buttonBackgroundColor</key>
+		<string>#F4C600</string>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuestionnaireIngViewController" customModule="ZiPingSwift" customModuleProvider="target">
+            <connections>
+                <outlet property="markLab" destination="uEi-3G-hJB" id="Axi-cV-Fvq"/>
+                <outlet property="starValuationBtn" destination="vNm-Hr-jGH" id="wfZ-uh-frG"/>
+                <outlet property="titlelab" destination="Mgj-2o-T7U" id="hRe-aJ-Q6w"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jz-ceping-jinxingzhong" translatesAutoresizingMaskIntoConstraints="NO" id="OtB-01-Dnz">
+                    <rect key="frame" x="53" y="75" width="269" height="163"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="OtB-01-Dnz" secondAttribute="height" multiplier="236:143" id="YYY-EC-FTf"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2017年秋季第一次测评" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mgj-2o-T7U">
+                    <rect key="frame" x="10" y="275" width="355" height="27.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="此次的测评时间范围2月15日~3月30日，请在该时间范围内完成幼儿的此次问卷测评。" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uEi-3G-hJB">
+                    <rect key="frame" x="30" y="327.5" width="315" height="36"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vNm-Hr-jGH">
+                    <rect key="frame" x="101" y="568" width="172" height="39"/>
+                    <color key="backgroundColor" red="1" green="0.3803921569" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="39" id="Z6u-tZ-sS4"/>
+                        <constraint firstAttribute="width" constant="172" id="aLS-hZ-REJ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="开始测评">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="starValuationAction:" destination="-1" eventType="touchUpInside" id="dqA-gt-lq7"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="OtB-01-Dnz" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="3Td-Ye-6um"/>
+                <constraint firstItem="Mgj-2o-T7U" firstAttribute="top" secondItem="OtB-01-Dnz" secondAttribute="bottom" constant="37" id="KYi-hr-mNS"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Mgj-2o-T7U" secondAttribute="trailing" constant="10" id="TZR-CQ-e2s"/>
+                <constraint firstItem="OtB-01-Dnz" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="55" id="bJR-Oc-hVf"/>
+                <constraint firstItem="uEi-3G-hJB" firstAttribute="top" secondItem="Mgj-2o-T7U" secondAttribute="bottom" constant="25" id="dYq-ly-kCw"/>
+                <constraint firstItem="vNm-Hr-jGH" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="lC0-9O-gCd"/>
+                <constraint firstItem="Mgj-2o-T7U" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="msh-HO-fIj"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uEi-3G-hJB" secondAttribute="trailing" constant="30" id="o0g-4Q-wuW"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="vNm-Hr-jGH" secondAttribute="bottom" constant="60" id="plC-aq-M0b"/>
+                <constraint firstItem="uEi-3G-hJB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="sEz-pw-Mpk"/>
+                <constraint firstItem="OtB-01-Dnz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="53" id="yXv-Pw-oQX"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="jz-ceping-jinxingzhong" width="235" height="143"/>
+    </resources>
+</document>

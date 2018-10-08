@@ -1,0 +1,70 @@
+PODS:
+  - Alamofire (4.4.0)
+  - Charts (3.0.2):
+    - Charts/Core (= 3.0.2)
+  - Charts/Core (3.0.2)
+  - DZNEmptyDataSet (1.8.1)
+  - ESTabBarController-swift (2.5)
+  - HandyJSON (4.1.3)
+  - IQKeyboardManagerSwift (5.0.6)
+  - JCore (1.1.6)
+  - JPush (3.0.7):
+    - JCore (~> 1.1.6)
+  - Kingfisher (3.6.2)
+  - MJRefresh (3.1.15)
+  - SideMenu (2.3.4)
+  - SnapKit (3.2.0)
+  - SwiftTheme (0.4.0)
+  - SwiftyJSON (3.1.4)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.4.0)
+  - Charts (<= 3.0.2)
+  - DZNEmptyDataSet (~> 1.8.1)
+  - ESTabBarController-swift (~> 2.5)
+  - HandyJSON (~> 4.1.0)
+  - IQKeyboardManagerSwift (~> 5.0.6)
+  - JPush (~> 3.0.6)
+  - Kingfisher (~> 3.6.1)
+  - MJRefresh (~> 3.1.15)
+  - SideMenu (~> 2.3.3)
+  - SnapKit (~> 3.2.0)
+  - SwiftTheme (~> 0.4.0)
+  - SwiftyJSON (~> 3.1.4)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Charts
+    - DZNEmptyDataSet
+    - ESTabBarController-swift
+    - HandyJSON
+    - IQKeyboardManagerSwift
+    - JCore
+    - JPush
+    - Kingfisher
+    - MJRefresh
+    - SideMenu
+    - SnapKit
+    - SwiftTheme
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  Charts: 236d6ccdd0ce6feae151d89e829a7397381a21fd
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  ESTabBarController-swift: 8daa432f2a9be8ebd25101dc46c84472fd760512
+  HandyJSON: bc81fbeb62d65ae5d5942ed29bc4a8265d18c1e8
+  IQKeyboardManagerSwift: 02bfbb0dff71c66d0ab77d80d25dfce0c3717735
+  JCore: 18fc8725124f26e55625eaf224659b3a999dcf63
+  JPush: 111b79b8a0169ab8fd4c486dac3ed166ed69293e
+  Kingfisher: 2c94e72c6830622c71d06adf4ea024c37d316830
+  MJRefresh: 9af70f5f9327a2cf87f0fb5929f35fcc2fa638ea
+  SideMenu: 2ea1a015d14ffb96110af43fe3232d995943e726
+  SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
+  SwiftTheme: 548eff28a606d0975e04b2e708b879d7eea660f6
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+
+PODFILE CHECKSUM: 4fbaade98563c2be1beca5292e17e8d98b9ed352
+
+COCOAPODS: 1.5.3
