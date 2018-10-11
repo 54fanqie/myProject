@@ -48,7 +48,7 @@ class ValuationResultView: UIView {
         
         headerTitleView = HeaderTitleView(frame: CGRect(x: 0, y: 16, width: frame.width, height: 46));
         tabelHeaderView.addSubview(headerTitleView)
-        headerTitleView.typeData = ["  \n总分","认知\n领域","语言\n领域","社会\n领域","学习\n品质",]
+        headerTitleView.typeData = ["  \n总分","认知\n领域","语言\n领域","社会\n领域","学习\n品质","健康\n领域","艺术\n领域"]
         //空白数据界面
         nodataView = NoPartakeViewController()
 //        nodataView.titleLab.text = "本年级暂不参与专项测评哦~"
@@ -91,7 +91,7 @@ extension ValuationResultView: UITableViewDelegate, UITableViewDataSource {
     
     
     func  getData(teacherResult :TeacherResult) -> NSDictionary {
-        let someArray : [String]=[teacherResult.scoreTotal!,teacherResult.part1!,teacherResult.part2!,teacherResult.part3!,teacherResult.part4!]
+        let someArray : [String]=[teacherResult.scoreTotal!,teacherResult.part1!,teacherResult.part2!,teacherResult.part3!,teacherResult.part4!,teacherResult.part5!,teacherResult.part6!]
         let mutable1 : NSMutableDictionary = NSMutableDictionary()
         mutable1.setObject(teacherResult.title!, forKey:"title"  as NSCopying)
         mutable1.setObject(teacherResult.rangeTime!, forKey:"time"  as NSCopying)

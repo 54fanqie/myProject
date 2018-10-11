@@ -18,6 +18,8 @@ class TeacherResult: CYJBaseModel {
     var part2 : String?
     var part3 : String?
     var part4 : String?
+    var part5 : String?
+    var part6 : String?
     var rangeTime : String?
 }
 
