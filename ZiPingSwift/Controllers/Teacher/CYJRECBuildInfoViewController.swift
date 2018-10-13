@@ -141,7 +141,6 @@ class CYJRECBuildInfoViewController: KYBaseCollectionViewController {
         super.viewWillDisappear(animated)
         //MARK: 设置recordView的父识图
         CYJASRRecordor.share.containerView = nil
-        Third.toast.hide {}
     }
     
     override func didReceiveMemoryWarning() {
@@ -246,7 +245,7 @@ extension CYJRECBuildInfoViewController {
         }else
         {
             //就算没有图片，也得把参数的位置刷新掉
-            self.recordParam.photo = self.uploadedImages
+//            self.recordParam.photo = self.uploadedImages
             self.saveIt()
         }
     }
@@ -351,7 +350,7 @@ extension CYJRECBuildInfoViewController {
             Third.toast.message("行为表现描述内容、照片、视频至少填写一个")
             return
         }
-        
+       
         isActionNext = true
         //        CYJRECBuildHelper.default.buildStep.nextStep()
         startUploading()
@@ -363,7 +362,7 @@ extension CYJRECBuildInfoViewController {
         Third.toast.show {}
         //使 actionView 禁用
         actionView.makeButtonDisabled()
-        
+
         // 上传 ： 1 上传图片或视频
         if self.recordParam.filetype == 2 {
             self.uploadVideo()
@@ -390,11 +389,12 @@ extension CYJRECBuildInfoViewController {
         
         RequestManager.POST(urlString: urlString, params: param ) { [unowned self] (data, error) in
             //如果存在error
-            Third.toast.hide {
-            }
+            
             //使 actionView 启用
             self.actionView.makeButtonEnabled()
             guard error == nil else {
+                Third.toast.hide {
+                }
                 Third.toast.message((error?.localizedDescription)!)
                 return
             }
@@ -406,6 +406,8 @@ extension CYJRECBuildInfoViewController {
             }
             //MARK: 如果是 下一步 -- 跳转到下一个页面
 //            LocaleSetting.share.recordChanged = true
+            Third.toast.hide {
+            }
             if self.isActionNext {
                 let score = CYJRECBuildScoreViewController()
                 self.navigationController?.pushViewController(score, animated: true)
@@ -437,6 +439,8 @@ extension CYJRECBuildInfoViewController {
             }
             
         case 2:
+            print("照片数量"+"\(selectedAssets.count)" + "===" + "\(uploadedImages.count)" + "===" + "\(imageSectionExamples.count)")
+            print(imageSectionExamples.count + selectedAssets.count + uploadedImages.count)
             return imageSectionExamples.count + selectedAssets.count + uploadedImages.count
         case 3:
             return 1
@@ -593,7 +597,7 @@ extension CYJRECBuildInfoViewController {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CYJRECImageAddCell", for: indexPath) as? CYJRECImageAddCell
             cell?.delegate = self
             //TODO: 根据情况，决定图片显示数据的来源
-            
+            print( "显示行" + "\(indexPath.row)")
             if indexPath.row < self.uploadedImages.count {
                 //将要显示网络图片
                 
@@ -964,9 +968,14 @@ extension CYJRECBuildInfoViewController: CYJRECImageAddCellDelegate {
         if let index = collectionView.indexPath(for: cell) {
             if index.row < self.uploadedImages.count {
                 uploadedImages.remove(at: index.row)
+                print(self.recordParam.photo.count)
+                print(index.row)
+                self.recordParam.photo.remove(at: index.row)
             }else if (index.row - self.uploadedImages.count) < self.selectedAssets.count {
                 selectedAssets.remove(at: (index.row - self.uploadedImages.count))
+                
             }
+            
             self.collectionView.reloadData()
         }
     }
@@ -976,14 +985,12 @@ extension CYJRECBuildInfoViewController: CYJRECImageAddCellDelegate {
 extension CYJRECBuildInfoViewController: CYJMediaUploaderDelegate {
     
     func imagesUploadComplete(mediaImage: [CYJMediaImage]?, error: Error?) {
-        
         if let images = mediaImage {
             // 这里图片是本地图片加上，可以上传的图片
             
             //加到uploadedImages里面
-            self.uploadedImages += images
-            
-            self.recordParam.photo = self.uploadedImages
+//            self.uploadedImages += images
+            self.recordParam.photo += images
             self.recordParam.filetype = 1
             //TODO: 图片上传完毕，保存
             self.saveIt()
@@ -997,7 +1004,6 @@ extension CYJRECBuildInfoViewController: CYJMediaUploaderDelegate {
         // TODO: 把phpto 置空 ，肯定没有
 
         if urlString == "error" {
-            Third.toast.hide {}
             Third.toast.message("视频上传失败")
             //TODO: 视频上传失败 - 让暂存再次可以点击
             self.actionView.makeButtonEnabled()
@@ -1010,6 +1016,5 @@ extension CYJRECBuildInfoViewController: CYJMediaUploaderDelegate {
             //TODO: 视频上传完毕，保存
             self.saveIt()
         }
-        
     }
 }

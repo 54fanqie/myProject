@@ -74,6 +74,16 @@ class CYJRECCacheViewController: KYBaseTableViewController, CYJActionPassOnDelea
             
             if let recordDict = data as? NSDictionary{
                 let target = JSONDeserializer<CYJRecord>.deserializeFrom(dict: recordDict)
+                
+                var tmp = [CYJMedia]()
+                for (index,value) in (target?.photo?.enumerated())! {
+                    if index<4{
+                        tmp.append(value)
+                    }
+                    print(index,value)
+                }
+                
+                target?.photo? = tmp
                 let cellframe = CYJRECCacheCellFrame(record: target!)
                 print(self.selectIndex)
                 self.dataSource[self.selectIndex] = cellframe

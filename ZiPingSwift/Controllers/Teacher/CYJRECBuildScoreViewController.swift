@@ -171,17 +171,27 @@ extension CYJRECBuildScoreViewController {
             make.width.equalTo(Theme.Measure.screenWidth)
             make.left.equalTo(view).offset(0)
         }
+        let backImage = UIImageView()
+        backImage.image =  #imageLiteral(resourceName: "icon_white_arrow")
+        navigationBarView.addSubview(backImage)
+        backImage.snp.makeConstraints { (make) in
+            make.left.equalTo(navigationBarView).offset(15)
+            make.height.equalTo(17)
+            make.width.equalTo(10)
+            make.bottom.equalTo(navigationBarView).offset(-12)
+        }
+        
+        
         let backButton = UIButton(type: .custom)
         //        backButton.setTitle("关闭", for: .normal)
         //        backButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 12)
-        backButton.setBackgroundImage(#imageLiteral(resourceName: "icon_white_arrow"), for: .normal)
         backButton.addTarget(self, action: #selector(backAction), for: UIControlEvents.touchUpInside)
         navigationBarView.addSubview(backButton)
         
         backButton.snp.makeConstraints { (make) in
-            make.left.equalTo(navigationBarView).offset(15)
-            make.height.equalTo(17)
-            make.width.equalTo(10)
+            make.left.equalTo(navigationBarView).offset(5)
+            make.height.equalTo(20)
+            make.width.equalTo(30)
             make.bottom.equalTo(navigationBarView).offset(-12)
         }
         
@@ -365,9 +375,8 @@ extension CYJRECBuildScoreViewController {
                 self.allDomains = tmp
                 
                 self.makeContentView()
-//                Third.toast.hide {
-//
-//                }
+                Third.toast.hide {
+                }
             }
         }
     }

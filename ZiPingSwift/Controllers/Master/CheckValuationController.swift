@@ -201,6 +201,7 @@ class CheckValuationController: KYBaseTableViewController {
             }
             self.navigationController?.pushViewController(optionController, animated: true)
         }
+        self.checkValuationParamModel.year = self.analyseParam.year
         //季节
         let season = self.semesterArray.index { $0.opId == self.analyseParam.semester}
         let seasonCondition = CYJConditionButton(title: self.semesterArray[season!].title , key: "time_season") { (sender) in
@@ -243,7 +244,7 @@ class CheckValuationController: KYBaseTableViewController {
             }
             self.navigationController?.pushViewController(optionController, animated: true)
         }
-        
+        self.checkValuationParamModel.semester = self.analyseParam.semester
         termConditionView.addCondition(yearCondition)
         termConditionView.addCondition(seasonCondition)
         termConditionView.frame.origin = CGPoint(x: 0, y: 0)

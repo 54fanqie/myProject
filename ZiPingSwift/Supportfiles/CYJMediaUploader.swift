@@ -95,7 +95,7 @@ class CYJMediaUploader: NSObject {
                         complete(text!)
                     }else {
                         DLog(rsp.descMsg)
-                        Third.toast.hide {}
+//                        Third.toast.hide {}
                         Third.toast.message(rsp.descMsg)
                     }
                 }
@@ -150,7 +150,7 @@ class CYJMediaUploader: NSObject {
                             
                             let error = NSError(domain: "com.chnyoujiao.zipingswift", code: Int(resp?.retCode ?? 0), userInfo: [kCFErrorDescriptionKey : rsp.descMsg])
 //                            error.localizedDescription = rsp.descMsg
-                            Third.toast.hide {}
+//                            Third.toast.hide {}
                             Third.toast.message(rsp.descMsg)
                             //重新注册一下吧还是
                             self.client = COSClient(appId: "1255326660", withRegion: "sh")
@@ -166,6 +166,7 @@ class CYJMediaUploader: NSObject {
                 //put object
                 self.client.putObject(task)
             })
+//            Third.toast.hide {}
         }
     }
     
@@ -195,30 +196,30 @@ class CYJMediaUploader: NSObject {
         requestOpin.deliveryMode = .highQualityFormat
         requestOpin.isSynchronous = true
         requestOpin.resizeMode = .exact
-        
+        requestOpin.isNetworkAccessAllowed = true//默认关闭
+ 
+    
         assets.forEach { (asset) in
-            
-            PHImageManager.default().requestImage(for: asset, targetSize: CGSize(width: 1242, height: CGFloat(MAXFLOAT)), contentMode: .aspectFit, options: requestOpin, resultHandler: { (image, options) in
-                
-                let imageURL = options!["PHImageFileURLKey"] as! URL
-                print("路径：",imageURL)
-                print("文件名：",imageURL.lastPathComponent)
-                
+            PHImageManager.default().requestImage(for: asset, targetSize:CGSize(width: 1242,height: CGFloat(MAXFLOAT)) , contentMode: .aspectFit, options: requestOpin, resultHandler: { (image, options) in
+                print(asset)
+                print(options)
+                let assetResource =  PHAssetResource.assetResources(for: asset)
+                let fileName = assetResource[0].originalFilename
+                print("文件名:",assetResource[0].originalFilename)
+               
                 let data = UIImageJPEGRepresentation(image!, 0.5)
-                
-//                print("图片：\(imageURL.lastPathComponent) 大小： ：\(data?.last)")
                 
                 let imageData = data
                 do {
-                    let filePath = photoPath + "\(Date().timeIntervalSince1970)" + imageURL.lastPathComponent
+                    let filePath = photoPath + "\(Date().timeIntervalSince1970)" + fileName
                     try imageData!.write(to: URL(fileURLWithPath: filePath), options: Data.WritingOptions.atomic)
                     let suffix = filePath.components(separatedBy: ".").last
                     
                     let dataImage = UIImage(data: imageData!)
                     
                     let mediaImage = CYJMediaImage()
-                    mediaImage.oldName =  imageURL.lastPathComponent
-                    mediaImage.url = "\(Date().timeIntervalSince1970)_" + imageURL.lastPathComponent
+                    mediaImage.oldName =  fileName
+                    mediaImage.url = "\(Date().timeIntervalSince1970)_" + fileName
                     mediaImage.size = (imageData?.last)!
                     mediaImage.minSize = Int(min(dataImage?.size.width ?? 0, dataImage?.size.height ?? 0))
                     mediaImage.suffix = suffix!
