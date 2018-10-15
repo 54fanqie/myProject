@@ -21,7 +21,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.2.1</string>
 	<key>CFBundleVersion</key>
-	<string>1.5.0</string>
+	<string>1.5.1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -48,7 +48,7 @@
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>App需要您的同意,才能访问相机，否者您将无法添加视频。</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>App需要您的同意,才能访问相册,否则您将无法上传相册图片。</string>
+	<string>App需要您的同意，才能添加图片，图片与文字的结合，才能更清晰、具体的记录孩子的成长。</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>STHUPO.TTF</string>
